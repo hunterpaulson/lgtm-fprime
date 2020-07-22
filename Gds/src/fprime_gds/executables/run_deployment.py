@@ -10,7 +10,6 @@ import platform
 import webbrowser
 import fprime_gds.executables.cli
 import fprime_gds.executables.utils
-import unused_import
 
 
 def get_args():
