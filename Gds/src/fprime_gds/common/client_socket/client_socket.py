@@ -9,6 +9,7 @@ from fprime_gds.common.handlers import DataHandler
 
 from fprime.constants import DATA_ENCODING
 
+
 # Constants for public use
 GUI_TAG = "GUI"
 FSW_TAG = "FSW"
@@ -94,7 +95,7 @@ class ThreadedTCPSocketClient(DataHandler):
         try:
             self.sock.connect((host, port))
             self.__data_recv_thread.start()
-        except:
+        except OSError:
             print("There was a problem connecting to the TCP Server")
             exit(-1)
 

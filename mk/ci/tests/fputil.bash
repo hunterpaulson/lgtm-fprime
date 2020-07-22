@@ -102,6 +102,8 @@ function integration_test {
         RET_MEMTEST=$?
         # Report memory leaks if they occured and the pytests were successful
         if [ ${RET_MEMTEST} -ne 0 ] && [ ${RET_PYTEST} -eq 0 ]; then 
+            # Print the valgrind log so the developer can locate their memory leak
+            cat "${LOG_DIR}/gds-logs/valgrind.log"
             fail_and_stop "Integration tests on ${WORKDIR} contain memory leaks"
         fi
 
