@@ -235,8 +235,6 @@ bool constructApp(bool dump, U32 port_number, char* hostname) {
 }
 
 void exitTasks(void) {
-    // FIXME: Need to remove this injected memory leak
-    int* leak = new int[100];
     rateGroup1Comp.exit();
     rateGroup2Comp.exit();
     rateGroup3Comp.exit();

@@ -9,8 +9,6 @@ from fprime_gds.common.handlers import DataHandler
 
 from fprime.constants import DATA_ENCODING
 
-# unused import for lgtm demo
-import copy
 
 # Constants for public use
 GUI_TAG = "GUI"
